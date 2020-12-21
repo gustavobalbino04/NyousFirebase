@@ -5,14 +5,15 @@ import reportWebVitals from './reportWebVitals';
 import Login from './Pages/Login';
 import {firebaseAppProvaider, FirebaseAppProvider} from "reactfire";
 import firebaseConfig from "./utils/firebaseConfig";
+import EventosPage from './Pages/eventos';
 
-//import 'bootstrap/dist/css/bootstrap.mim.css';
+import 'bootstrap/dist/css/bootstrap.mim.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
 
-    <Login />
+    <EventosPage/>
     </FirebaseAppProvider>
   </React.StrictMode>,
   document.getElementById('root')

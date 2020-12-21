@@ -4,16 +4,16 @@ import './index.css';
 import {Form, Button, Container} from 'react-bootstrap';
 
 const Login = () =>{
-    const Firebase = useFirebaseApp();
+    const firebase = useFirebaseApp();
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
     const logar = (event) =>{
         event.preventDefault();
 
-        Firebase.auth().signInWithEmailAndPassword(email, senha)
+        firebase.auth().signInWithEmailAndPassword(email, senha)
         .then(result => {
-            localStorage.SetToken("Nyous". result.user.refreshToken);
+            localStorage.setItem("Nyous", result.user.refreshToken);
             alert("seja bem vindo");
         })
         .catch(error => {
